@@ -1,0 +1,5 @@
+{
+  "welcome": "Welcome to my app!",
+  "switchLanguage": "Switch Language",
+  "greeting": "Hello, {name}!"
+}
