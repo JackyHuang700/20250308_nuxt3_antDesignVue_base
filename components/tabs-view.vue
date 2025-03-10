@@ -50,11 +50,6 @@ const props = defineProps<Props>()
   { immediate: true }
 )
  */
-const setAddTabPane = (newTab: CustomTabsPane) => {
-  if (!objArrTabs.value.some((tab) => tab.key === newTab.key)) {
-    objArrTabs.value.push(newTab)
-  }
-}
 
 const setMockTabs = () => {
   objArrTabs.value =
@@ -62,9 +57,6 @@ const setMockTabs = () => {
 }
 
 onMounted(() => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-expressions, no-constant-binary-expression
-  true && setMockTabs()
+  setMockTabs()
 })
-
-defineExpose({ setAddTabPane })
 </script>
