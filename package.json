@@ -36,6 +36,7 @@
     "@nuxtjs/eslint-module": "^4.1.0",
     "eslint": "^9.21.0",
     "nuxt-lodash": "^2.5.3",
-    "prettier": "3.5.3"
+    "prettier": "3.5.3",
+    "sass": "^1.85.1"
   }
 }
