@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen">
+  <div class="bg-[var(--k-bg-color)] h-screen">
     <div
       class="flex lg:flex-row flex-col flex-wrap lg:flex-nowrap justify-center items-center gap-5 mx-auto max-w-[800px] xl:max-w-[1000px] h-full"
     >

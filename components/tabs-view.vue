@@ -62,7 +62,8 @@ const setMockTabs = () => {
 }
 
 onMounted(() => {
-  setMockTabs()
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions, no-constant-binary-expression
+  false && setMockTabs()
 })
 
 defineExpose({ setAddTabPane })

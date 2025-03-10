@@ -81,7 +81,6 @@ export const useCustomTabsPane = () => {
     const _getAllTabs = getAllTabs()
     const _getAllTabsIndex = _getAllTabs.find((c) => c.key === '/')
     const _getAllTabsExcludeIndex = _getAllTabs.filter((c) => c.key !== '/')
-
     let _result = [_getAllTabsIndex as CustomTabsPane]
     const _canTest = false
 

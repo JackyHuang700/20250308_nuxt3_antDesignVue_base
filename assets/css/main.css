@@ -1,8 +1,16 @@
 @import 'tailwindcss';
 
 :root {
+  --k-bg-color: #f2f3f5;
 }
 
 body {
   font-family: 'Noto Sans TC', sans-serif;
+}
+
+@theme {
+  /* --color-k-bg: var(--k-bg-color); */
+}
+
+@layer components {
 }
