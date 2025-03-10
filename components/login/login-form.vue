@@ -4,20 +4,29 @@
   >
     <slot />
 
-    <a-input v-model:value="strAccount" placeholder="account" allow-clear>
-      <template #prefix>
-        <user-outlined class="!text-[#a8abb2] align-[0.125em]" />
-      </template>
-      <!-- <template #suffix>
-        <a-tooltip title="Extra information">
-          <info-circle-outlined style="color: rgba(0, 0, 0, 0.45)" />
-        </a-tooltip>
-      </template> -->
-    </a-input>
+    <div class="w-full">
+      <a-input v-model:value="strAccount" placeholder="account" allow-clear>
+        <template #prefix>
+          <user-outlined
+            class="!text-[var(--k-text-input-placeholder)] align-[0.125em]"
+          />
+        </template>
+      </a-input>
 
-    <loginFormPassword v-model:password="strPassword" />
+      <FormErrorMsg :error-msg="objUserLoginErrors.account" />
+    </div>
 
-    <a-button type="primary" class="w-full" @click="handleMessage">
+    <LoginFormPassword
+      v-model:password="strPassword"
+      :password-error="objUserLoginErrors.password"
+    />
+
+    <a-button
+      type="primary"
+      class="w-full"
+      :loading="mutation.isPending.value"
+      @click="onSubmit"
+    >
       login
     </a-button>
     <FormRememberMe v-model:remember-me="isRememberMe" />
@@ -25,21 +34,66 @@
 </template>
 
 <script setup lang="ts">
-import loginFormPassword from '@/components/login/login-form-password.vue'
+import { useMutation } from '@tanstack/vue-query'
+import {
+  setClearErrors,
+  setAddErrors,
+  UserLoginSchema,
+} from '@/composables/useZod'
+
+import LoginFormPassword from '@/components/login/login-form-password.vue'
 import FormRememberMe from '@/components/login/form-remember-me.vue'
+import FormErrorMsg from '@/components/form/form-error-msg.vue'
 
 const strAccount = ref('')
 const strPassword = ref('')
 const isRememberMe = ref(false)
 
-const handleMessage = () => {
-  message.info('This is a normal message')
+const objUserLoginErrors = reactive<{
+  account?: string
+  password?: string
+}>({})
+
+const mutation = useMutation({
+  mutationKey: [
+    'login',
+    {
+      account: strAccount.value,
+      password: strPassword.value,
+    },
+  ],
+  mutationFn: setApiUserLogin,
+  onSuccess: async (data) => {
+    console.log('Login successful:', data)
+    false && (await navigateTo('/admin'))
+  },
+  onError: (error) => {
+    console.error('Login error:', error)
+  },
+})
+
+const onSubmit = async () => {
+  const _safeParse = UserLoginSchema.safeParse({
+    account: strAccount.value,
+    password: strPassword.value,
+  })
+
+  Object.assign(objUserLoginErrors, setClearErrors(objUserLoginErrors))
+
+  if (_safeParse.success === false) {
+    Object.assign(objUserLoginErrors, setAddErrors(_safeParse.error.issues))
+    return
+  }
+
+  mutation.mutate({
+    account: strAccount.value,
+    password: strPassword.value,
+    // rememberMe: isRememberMe.value,
+  })
 }
 
 defineOptions({
   name: 'LoginForm',
 })
 </script>
-<style scoped>
-/* #a8abb2 */
-</style>
+<style scoped></style>

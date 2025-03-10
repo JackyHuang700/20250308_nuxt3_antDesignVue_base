@@ -1,7 +1,7 @@
 <template>
-  <div class="relative bg-[var(--k-bg-color)] h-screen">
+  <div class="relative bg-[var(--k-bg-color)] h-screen login-form">
     <div class="flex justify-around items-center mx-[60px] h-full">
-      <div class="login-img-group block z-[2] relative">
+      <div class="login-img-group hidden lg:block z-[2] relative">
         <Loginlandscape />
       </div>
       <loginForm>
@@ -10,7 +10,7 @@
 
       <NuxtImg
         src="login-bg.png"
-        class="bottom-0 left-0 fixed w-[80%] h-full"
+        class="hidden lg:block bottom-0 left-0 fixed w-[80%] h-full pointer-events-none"
       />
     </div>
     <div
@@ -36,4 +36,8 @@ defineOptions({
   name: 'Login',
 })
 </script>
-<style scoped></style>
+<style>
+.login-form .anticon {
+  @apply align-[0.0125em];
+}
+</style>

@@ -139,18 +139,6 @@
 </template>
 
 <script setup lang="ts">
-import {} from 'vue'
-
-/* type Props = {
-     data_?: string
-   }
-   const props = defineProps<Props>() */
-
-/* type Emit = {
-     set: [value: string]
-   }
-   const emit = defineEmits<Emit>() */
-
 defineOptions({
   name: 'Loginlandscape',
 })
