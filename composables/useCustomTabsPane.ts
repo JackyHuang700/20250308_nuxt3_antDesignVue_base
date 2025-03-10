@@ -135,7 +135,8 @@ export const useCustomTabsPane = () => {
       const { component: _, ...rest } = _tab
 
       strActiveTab.value = _path
-      objArrTabs.value.push(rest)
+      // objArrTabs.value.push(rest) // !! don't delete it !!
+      Object.assign(objArrTabs.value, [rest])
       strArrMenuSelectedKeys.value = [_path]
       strArrMenuOpenKeys.value = [..._tab.menuOpenKeys]
     }
