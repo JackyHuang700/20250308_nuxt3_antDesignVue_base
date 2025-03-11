@@ -8,7 +8,6 @@ import VueQueryDemo from '@/components/vue-query-demo.vue'
 import ZodDemo from '@/components/zod-demo.vue'
 
 import type { CustomTabsPane } from '~/types/types'
-import type { MenuProps } from 'ant-design-vue'
 
 export const strActiveTab = ref<CustomTabsPane['key']>('/')
 export const objArrTabs = ref<CustomTabsPane[]>([])
@@ -22,7 +21,6 @@ export const useCustomTabsPane = () => {
   const getAllTabs = () => {
     return [
       {
-        // key: 'admin-index-page',
         key: '/',
         title: 'admin-index',
         path: '/',
@@ -30,7 +28,6 @@ export const useCustomTabsPane = () => {
         closable: false,
       },
       {
-        // key: 'env-demo-page',
         key: '/demo/env-demo',
         title: 'env-demo',
         path: '/demo/env-demo',
@@ -39,7 +36,6 @@ export const useCustomTabsPane = () => {
         component: EnvDemo,
       },
       {
-        // key: 'pinia-demo-page',
         key: '/demo/pinia-demo',
         title: 'pinia-demo',
         path: '/demo/pinia-demo',
@@ -48,7 +44,6 @@ export const useCustomTabsPane = () => {
         component: PiniaDemo,
       },
       {
-        // key: 'vue-query-demo-page',
         key: '/demo/vue-query-demo',
         title: 'vue-query-demo',
         path: '/demo/vue-query-demo',
@@ -57,7 +52,6 @@ export const useCustomTabsPane = () => {
         component: VueQueryDemo,
       },
       {
-        // key: 'zod-demo-page',
         key: '/demo/zod-demo',
         title: 'zod-demo',
         path: '/demo/zod-demo',
@@ -66,13 +60,19 @@ export const useCustomTabsPane = () => {
         component: ZodDemo,
       },
       {
-        // key: 'i18n-demo-page',
         key: '/demo/i18n-demo',
         title: 'i18n-demo',
         path: '/demo/i18n-demo',
         menuOpenKeys: [],
         closable: true,
         component: I18nDemo,
+      },
+      {
+        key: '/profile',
+        title: 'profile',
+        path: '/profile',
+        menuOpenKeys: [],
+        closable: true,
       },
     ]
   }
@@ -180,10 +180,6 @@ export const useCustomTabsPane = () => {
     }
   }
 
-  const onMenuClick: MenuProps['onClick'] = (e) => {
-    setAddObjArrTabs(e.key as CustomTabsPane['key'])
-  }
-
   return {
     getObjArrTabsView,
     getDefaultTabsExcludeComponent,
@@ -192,6 +188,5 @@ export const useCustomTabsPane = () => {
     setInitActiveTabAndMenuSelectedKeys,
     onTabsChange,
     onTabsRemoveOrAdd,
-    onMenuClick,
   }
 }
