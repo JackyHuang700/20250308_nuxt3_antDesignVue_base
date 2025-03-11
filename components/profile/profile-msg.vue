@@ -26,7 +26,7 @@
       :loading="mutation.isPending.value"
       @click="onSubmit"
     >
-      {{ '更新資料' }}
+      {{ objLangCommon.update_data }}
     </a-button>
   </ProfileContentTitle>
 </template>
@@ -45,7 +45,7 @@ import ProfileContentTitle from '@/components/profile/profile-content-title.vue'
 import FormField from '@/components/form/form-field.vue'
 import ProfileAvatarUpload from '@/components/profile/profile-avatar-upload.vue'
 
-const { objLangProfile } = useI18nLang()
+const { objLangProfile, objLangCommon } = useI18nLang()
 
 const strNickName = ref('')
 const strEmail = ref('')

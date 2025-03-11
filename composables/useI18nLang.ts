@@ -6,6 +6,12 @@ export const useI18nLang = () => {
     greeting: (params = '') => t('greeting', { name: params }),
   })
 
+  const objLangCommon = reactive({
+    update_data: t('update_data'),
+    true: t('true'),
+    false: t('false'),
+  })
+
   const objLangUserLogin = reactive({
     login: t('login'),
     login_account_placeholder: t('login_account_placeholder'),
@@ -30,6 +36,7 @@ export const useI18nLang = () => {
 
   return {
     objLangDemo,
+    objLangCommon,
     objLangUserLogin,
     objLangProfile,
     setLocaleToUS,

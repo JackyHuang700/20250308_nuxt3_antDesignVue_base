@@ -25,6 +25,7 @@ import {
   SettingOutlined,
   CalendarOutlined,
 } from '@ant-design/icons-vue'
+import ProfilePreferenceSetting from '@/components/profile/profile_preference_setting.vue'
 
 const { objLangProfile } = useI18nLang()
 
@@ -48,7 +49,7 @@ const objArrTabPane = ref<ObjArrTabPane[]>([
     key: 'profile-setting',
     icon: markRaw(SettingOutlined),
     title: objLangProfile.profile_preference_setting,
-    component: null,
+    component: markRaw(ProfilePreferenceSetting),
   },
   {
     key: 'profile-log',

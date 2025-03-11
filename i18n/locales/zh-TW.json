@@ -2,6 +2,10 @@
   "welcome": "歡迎使用我的應用程式！",
   "switchLanguage": "切換語言",
   "greeting": "你好，{name}！",
+  "true": "是",
+  "false": "否",
+  "logout": "退出系統",
+  "update_data": "更新資料",
   "login": "登入",
   "login_account_placeholder": "請輸入帳號",
   "login_password_placeholder": "請輸入密碼",
@@ -10,6 +14,5 @@
   "profile_setting": "帳戶設置",
   "profile_msg": "帳戶訊息",
   "profile_preference_setting": "偏好設定",
-  "profile_security_log": "安全日誌",
-  "logout": "退出系統"
+  "profile_security_log": "安全日誌"
 }
