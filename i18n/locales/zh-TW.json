@@ -1,5 +1,6 @@
 {
   "welcome": "歡迎使用我的應用程式！",
   "switchLanguage": "切換語言",
-  "greeting": "你好，{name}！"
+  "greeting": "你好，{name}！",
+  "login": "登入"
 }

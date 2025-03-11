@@ -27,7 +27,7 @@
       :loading="mutation.isPending.value"
       @click="onSubmit"
     >
-      login
+      {{ objLangUserLogin.login }}
     </a-button>
     <FormRememberMe v-model:remember-me="isRememberMe" />
   </div>
@@ -40,10 +40,13 @@ import {
   setAddErrors,
   UserLoginSchema,
 } from '@/composables/useZod'
+import { useI18nLang } from '@/composables/useI18nLang'
 
 import LoginFormPassword from '@/components/login/login-form-password.vue'
 import FormRememberMe from '@/components/login/form-remember-me.vue'
 import FormErrorMsg from '@/components/form/form-error-msg.vue'
+
+const { objLangUserLogin } = useI18nLang()
 
 const strAccount = ref('')
 const strPassword = ref('')
