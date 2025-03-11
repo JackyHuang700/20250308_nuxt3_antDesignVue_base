@@ -1,6 +1,9 @@
 <template>
   <div>
     <a-tabs v-model:active-key="strActiveKey" hide-add tab-position="left">
+      <template #leftExtra>
+        <ProfileInfo />
+      </template>
       <a-tab-pane v-for="_tabPane in objArrTabPane" :key="_tabPane.key">
         <template #tab>
           <component :is="_tabPane.icon" />
@@ -13,12 +16,17 @@
 </template>
 
 <script setup lang="ts">
+import { useI18nLang } from '@/composables/useI18nLang'
+
+import ProfileInfo from '@/components/profile/profile-info.vue'
 import ProfileMsg from '~/components/profile/profile-msg.vue'
 import {
   UserOutlined,
   SettingOutlined,
   CalendarOutlined,
 } from '@ant-design/icons-vue'
+
+const { objLangProfile } = useI18nLang()
 
 const strActiveKey =
   ref<(typeof objArrTabPane.value)[number]['key']>('profile-msg')
@@ -33,19 +41,19 @@ const objArrTabPane = ref<ObjArrTabPane[]>([
   {
     key: 'profile-msg',
     icon: markRaw(UserOutlined),
-    title: '帳戶訊息',
+    title: objLangProfile.profile_msg,
     component: markRaw(ProfileMsg),
   },
   {
     key: 'profile-setting',
     icon: markRaw(SettingOutlined),
-    title: '偏好設定',
+    title: objLangProfile.profile_preference_setting,
     component: null,
   },
   {
     key: 'profile-log',
     icon: markRaw(CalendarOutlined),
-    title: '安全日誌',
+    title: objLangProfile.profile_security_log,
     component: null,
   },
 ] as const)

@@ -44,6 +44,7 @@ import {
   UserLoginSchema,
 } from '@/composables/useZod'
 import { useI18nLang } from '@/composables/useI18nLang'
+import { setApiUserLogin } from '@/composables/useApi'
 
 import LoginFormPassword from '@/components/login/login-form-password.vue'
 import FormRememberMe from '@/components/login/form-remember-me.vue'
@@ -77,7 +78,7 @@ const mutation = useMutation({
   },
 })
 
-const onSubmit = async () => {
+const onSubmit = () => {
   const _safeParse = UserLoginSchema.safeParse({
     account: strAccount.value,
     password: strPassword.value,

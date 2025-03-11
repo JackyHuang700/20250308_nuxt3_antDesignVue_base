@@ -19,6 +19,8 @@ export const useI18nLang = () => {
   const objLangProfile = reactive({
     profile_setting: t('profile_setting'),
     profile_msg: t('profile_msg'),
+    profile_preference_setting: t('profile_preference_setting'),
+    profile_security_log: t('profile_security_log'),
     logout: t('logout'),
   })
 

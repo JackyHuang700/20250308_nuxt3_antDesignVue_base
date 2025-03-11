@@ -5,6 +5,11 @@ export const UserLoginSchema = z.object({
   password: z.string().min(3, '密碼至少需要 3 個字元'),
 })
 
+export const ProfileUpdateSchema = z.object({
+  nickName: z.string().min(2, '暱稱至少需要 2 個字元').nonempty('暱稱不可為空'),
+  email: z.string().email('請輸入正確的 Email 格式'),
+})
+
 // clear all errors
 type setClearErrors = (
   errorsObj: Record<string, string | undefined>

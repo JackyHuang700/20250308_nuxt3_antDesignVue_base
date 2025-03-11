@@ -21,7 +21,6 @@
 </template>
 
 <script setup lang="ts">
-import {} from 'vue'
 import { useI18nLang } from '@/composables/useI18nLang'
 
 const { t } = useI18n()

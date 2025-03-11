@@ -9,5 +9,7 @@
   "login_remember_me": "Remember Me",
   "profile_setting": "Profile Setting",
   "profile_msg": "Profile Message",
+  "profile_preference_setting": "Preference Setting",
+  "profile_security_log": "Security Log",
   "logout": "Logout"
 }

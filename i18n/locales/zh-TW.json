@@ -9,5 +9,7 @@
   "login_remember_me": "記住我",
   "profile_setting": "帳戶設置",
   "profile_msg": "帳戶訊息",
+  "profile_preference_setting": "偏好設定",
+  "profile_security_log": "安全日誌",
   "logout": "退出系統"
 }

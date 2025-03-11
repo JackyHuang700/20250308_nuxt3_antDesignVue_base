@@ -1,7 +1,7 @@
 <template>
   <label
     :for="props.id"
-    class="relative k-label"
+    class="relative font-semibold k-label"
     :class="{ 'pl-3.5': props.required }"
   >
     {{ props.label }}
