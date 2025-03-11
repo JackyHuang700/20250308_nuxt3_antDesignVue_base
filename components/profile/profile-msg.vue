@@ -1,37 +1,34 @@
 <template>
-  <div class="flex flex-col justify-start items-start min-h-dd">
-    <ProfileContentTitle :title="objLangProfile.profile_msg" />
-    <div class="flex flex-wrap justify-start items-center gap-3.5 w-full">
-      <ProfileAvatarUpload />
+  <ProfileContentTitle :title="objLangProfile.profile_msg">
+    <ProfileAvatarUpload />
 
-      <FormField
-        id="nickName"
-        v-model:value="strNickName"
-        :label="'暱稱'"
-        :required="true"
-        :placeholder="'請輸入暱稱'"
-        :error="objProfileUpdateErrors.nickName"
-      />
+    <FormField
+      id="nickName"
+      v-model:value="strNickName"
+      :label="'暱稱'"
+      :required="true"
+      :placeholder="'請輸入暱稱'"
+      :error="objProfileUpdateErrors.nickName"
+    />
 
-      <FormField
-        id="email"
-        v-model:value="strEmail"
-        :label="'電子郵件'"
-        :required="false"
-        :placeholder="'6666@gmail.com'"
-        :error="objProfileUpdateErrors.email"
-      />
+    <FormField
+      id="email"
+      v-model:value="strEmail"
+      :label="'電子郵件'"
+      :required="false"
+      :placeholder="'6666@gmail.com'"
+      :error="objProfileUpdateErrors.email"
+    />
 
-      <a-button
-        type="primary"
-        class="ml-auto w-1/3 max-w-[160px]"
-        :loading="mutation.isPending.value"
-        @click="onSubmit"
-      >
-        {{ '更新資料' }}
-      </a-button>
-    </div>
-  </div>
+    <a-button
+      type="primary"
+      class="ml-auto w-1/3 max-w-[160px]"
+      :loading="mutation.isPending.value"
+      @click="onSubmit"
+    >
+      {{ '更新資料' }}
+    </a-button>
+  </ProfileContentTitle>
 </template>
 
 <script setup lang="ts">
