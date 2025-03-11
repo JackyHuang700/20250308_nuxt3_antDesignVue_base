@@ -34,7 +34,10 @@ import {
   AppstoreOutlined,
 } from '@ant-design/icons-vue'
 
-const { onMenuClick } = useCustomTabsPane()
+import type { MenuProps } from 'ant-design-vue'
+import type { CustomTabsPane } from '~/types/types'
+
+const { setAddObjArrTabs } = useCustomTabsPane()
 const { isCollapsed } = useLayoutCollapsed()
 
 const objMenuStatus = reactive<{
@@ -140,6 +143,10 @@ const objArrMenuitems = reactive([
     ],
   },
 ])
+
+const onMenuClick: MenuProps['onClick'] = (e) => {
+  setAddObjArrTabs(e.key as CustomTabsPane['key'])
+}
 
 watch(
   () => strArrMenuOpenKeys.value,
