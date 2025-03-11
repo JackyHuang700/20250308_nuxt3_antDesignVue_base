@@ -6,5 +6,8 @@
   "login_account_placeholder": "請輸入帳號",
   "login_password_placeholder": "請輸入密碼",
   "login_password_can_show_password_tooltip": "點擊切換是否顯示密碼",
-  "login_remember_me": "記住我"
+  "login_remember_me": "記住我",
+  "profile_setting": "帳戶設置",
+  "profile_msg": "帳戶訊息",
+  "logout": "退出系統"
 }

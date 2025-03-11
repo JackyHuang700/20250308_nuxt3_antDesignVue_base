@@ -16,6 +16,12 @@ export const useI18nLang = () => {
     login_remember_me: t('login_remember_me'),
   })
 
+  const objLangProfile = reactive({
+    profile_setting: t('profile_setting'),
+    profile_msg: t('profile_msg'),
+    logout: t('logout'),
+  })
+
   const setLocaleToUS = () => setLocale('en-US')
 
   const setLocaleToTW = () => setLocale('zh-TW')
@@ -23,6 +29,7 @@ export const useI18nLang = () => {
   return {
     objLangDemo,
     objLangUserLogin,
+    objLangProfile,
     setLocaleToUS,
     setLocaleToTW,
   }

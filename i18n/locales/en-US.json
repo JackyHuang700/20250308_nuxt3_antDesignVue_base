@@ -6,5 +6,8 @@
   "login_account_placeholder": "Please enter your account",
   "login_password_placeholder": "Please enter your password",
   "login_password_can_show_password_tooltip": "Click to toggle whether to show the password",
-  "login_remember_me": "Remember Me"
+  "login_remember_me": "Remember Me",
+  "profile_setting": "Profile Setting",
+  "profile_msg": "Profile Message",
+  "logout": "Logout"
 }

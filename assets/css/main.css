@@ -3,6 +3,7 @@
 :root {
   --k-bg-color: #f2f3f5;
   --k-text-input-placeholder: #a8abb2;
+  --k-layout-header-height: 50px;
 }
 
 body {
