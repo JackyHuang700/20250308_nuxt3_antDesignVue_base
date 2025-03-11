@@ -8,6 +8,12 @@ export const useI18nLang = () => {
 
   const objLangUserLogin = reactive({
     login: t('login'),
+    login_account_placeholder: t('login_account_placeholder'),
+    login_password_placeholder: t('login_password_placeholder'),
+    login_password_can_show_password_tooltip: t(
+      'login_password_can_show_password_tooltip'
+    ),
+    login_remember_me: t('login_remember_me'),
   })
 
   const setLocaleToUS = () => setLocale('en-US')

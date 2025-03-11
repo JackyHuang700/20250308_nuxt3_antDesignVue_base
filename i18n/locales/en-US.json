@@ -2,5 +2,9 @@
   "welcome": "Welcome to my app!",
   "switchLanguage": "Switch Language",
   "greeting": "Hello, {name}!",
-  "login": "Login"
+  "login": "Login",
+  "login_account_placeholder": "Please enter your account",
+  "login_password_placeholder": "Please enter your password",
+  "login_password_can_show_password_tooltip": "Click to toggle whether to show the password",
+  "login_remember_me": "Remember Me"
 }

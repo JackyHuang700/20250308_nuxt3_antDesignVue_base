@@ -8,10 +8,10 @@
     <h1>{{ t('welcome') }}</h1>
     <div class="flex flex-col flex-wrap justify-center items-start gap-2.5">
       <p>{{ t('greeting', { name: '使用者' }) }}</p>
-      <p>{{ objLangDemo.greeting(strA) }}</p>
-      <p>{{ strA }}</p>
-      <button @click="onChangeUserNameByJK">change JK user</button>
-      <button @click="onChangeUserNameByLeo">change Leo user</button>
+      <p>{{ objLangDemo.greeting(strName) }}</p>
+      <p>{{ strName }}</p>
+      <button @click="onChangeUserNameToJK">change JK user</button>
+      <button @click="onChangeUserNameToLeo">change Leo user</button>
     </div>
     <div class="flex flex-col flex-wrap justify-center items-start gap-2.5">
       <button @click="onSetLocaleToUS">en-US</button>
@@ -28,14 +28,14 @@ const { t } = useI18n()
 const { $i18n } = useNuxtApp()
 const { objLangDemo, setLocaleToTW, setLocaleToUS } = useI18nLang()
 
-const strA = ref('default name')
+const strName = ref('default name')
 
-const onChangeUserNameByJK = () => {
-  strA.value = 'JK'
+const onChangeUserNameToJK = () => {
+  strName.value = 'JK'
 }
 
-const onChangeUserNameByLeo = () => {
-  strA.value = 'Leo'
+const onChangeUserNameToLeo = () => {
+  strName.value = 'Leo'
 }
 
 const onSetLocaleToUS = () => {

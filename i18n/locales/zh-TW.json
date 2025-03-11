@@ -2,5 +2,9 @@
   "welcome": "歡迎使用我的應用程式！",
   "switchLanguage": "切換語言",
   "greeting": "你好，{name}！",
-  "login": "登入"
+  "login": "登入",
+  "login_account_placeholder": "請輸入帳號",
+  "login_password_placeholder": "請輸入密碼",
+  "login_password_can_show_password_tooltip": "點擊切換是否顯示密碼",
+  "login_remember_me": "記住我"
 }

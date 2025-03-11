@@ -5,14 +5,17 @@
     <slot />
 
     <div class="w-full">
-      <a-input v-model:value="strAccount" placeholder="account" allow-clear>
+      <a-input
+        v-model:value="strAccount"
+        :placeholder="objLangUserLogin.login_account_placeholder"
+        allow-clear
+      >
         <template #prefix>
           <user-outlined
             class="!text-[var(--k-text-input-placeholder)] align-[0.125em]"
           />
         </template>
       </a-input>
-
       <FormErrorMsg :error-msg="objUserLoginErrors.account" />
     </div>
 
@@ -51,7 +54,6 @@ const { objLangUserLogin } = useI18nLang()
 const strAccount = ref('')
 const strPassword = ref('')
 const isRememberMe = ref(false)
-
 const objUserLoginErrors = reactive<{
   account?: string
   password?: string
