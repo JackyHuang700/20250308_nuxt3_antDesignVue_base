@@ -46,19 +46,19 @@ const objArrTabPane = ref<ObjArrTabPane[]>([
   {
     key: 'profile-msg',
     icon: markRaw(UserOutlined),
-    title: objLangProfile.profile_msg,
+    title: objLangProfile.value.profile_msg,
     component: markRaw(ProfileMsg),
   },
   {
     key: 'profile-setting',
     icon: markRaw(SettingOutlined),
-    title: objLangProfile.profile_preference_setting,
+    title: objLangProfile.value.profile_preference_setting,
     component: markRaw(ProfilePreferenceSetting),
   },
   {
     key: 'profile-log',
     icon: markRaw(CalendarOutlined),
-    title: objLangProfile.profile_security_log,
+    title: objLangProfile.value.profile_security_log,
     component: markRaw(ProfileSecurityLog),
   },
 ] as const)
