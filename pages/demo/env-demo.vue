@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import EnvDemo from '@/components/env-demo.vue'
+import EnvDemo from '~/components/demo/env-demo.vue'
 
 defineOptions({
   name: 'EnvDemoPage',

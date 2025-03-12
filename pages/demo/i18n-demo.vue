@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import I18nDemo from '@/components/i18n-demo.vue'
+import I18nDemo from '~/components/demo/i18n-demo.vue'
 
 defineOptions({
   name: 'I18nDemoPage',

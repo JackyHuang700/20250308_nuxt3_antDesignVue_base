@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import PiniaDemo from '@/components/pinia-demo.vue'
+import PiniaDemo from '~/components/demo/pinia-demo.vue'
 
 defineOptions({
   name: 'PiniaDemoPage',
