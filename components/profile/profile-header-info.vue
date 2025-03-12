@@ -4,7 +4,13 @@
       <div
         class="hover:bg-zinc-100 px-2 !max-h-[calc(var(--k-layout-header-height)-1px)] transition-all duration-300 ease-in-out cursor-pointer"
       >
-        <div>{{ strUserName }}</div>
+        <div class="flex justify-center items-center gap-1.5">
+          <NuxtImg
+            src="profile-logo.jpg"
+            class="rounded-full w-[22px] h-[22px]"
+          />
+          <div>{{ strUserName }}</div>
+        </div>
       </div>
       <template #overlay>
         <a-menu>
