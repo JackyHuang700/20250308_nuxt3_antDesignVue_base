@@ -1,8 +1,5 @@
 import type { QueryFunction, QueryKey } from '@tanstack/vue-query'
 
-// const config = useRuntimeConfig()
-// config.public.BACKEND_URL
-
 export type Post = {
   userId: number
   id: number
@@ -23,17 +20,19 @@ export type SetApiUserLoginParams = {
   password: string
 }
 export const setApiUserLogin = async (params: SetApiUserLoginParams) => {
-  const _response = await fetch('api/test', {
+  const config = useRuntimeConfig()
+  const _response = await fetch(`${config.public.BACKEND_URL}/api/test`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
+      // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify(params),
   })
 
-  if (!_response.ok) {
+  /*  if (!_response.ok) {
     throw new Error('Error')
-  }
+  } */
 
   return await _response.json()
 }
@@ -45,7 +44,8 @@ export type SetApiProfileUpdateParams = {
 export const setApiProfileUpdate = async (
   params: SetApiProfileUpdateParams
 ) => {
-  const _response = await fetch('api/test', {
+  const config = useRuntimeConfig()
+  const _response = await fetch(`${config.public.BACKEND_URL}/api/test`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -53,9 +53,9 @@ export const setApiProfileUpdate = async (
     body: JSON.stringify(params),
   })
 
-  if (!_response.ok) {
+  /* if (!_response.ok) {
     throw new Error('Error')
-  }
+  } */
 
   return await _response.json()
 }

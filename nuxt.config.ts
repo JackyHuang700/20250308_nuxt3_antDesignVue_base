@@ -55,7 +55,7 @@ export default defineNuxtConfig({
     public: {
       NODE_ENV: process.env.NODE_ENV,
       NUXT_APP_TITLE: process.env.NUXT_APP_TITLE,
-      BACKEND_URL: process.env.BACKEND_URL,
+      BACKEND_URL: process.env.NUXT_BACKEND_URL,
     },
   },
   antd: {},

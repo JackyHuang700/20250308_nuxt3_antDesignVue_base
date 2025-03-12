@@ -3,8 +3,9 @@ declare namespace NodeJS {
     // # Environment Configuration
     NODE_ENV: 'development' | 'production'
 
+    // Only Read Nuxt Based
     NUXT_APP_TITLE: string
 
-    BACKEND_URL: string
+    NUXT_BACKEND_URL: string
   }
 }
