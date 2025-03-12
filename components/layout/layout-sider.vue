@@ -82,14 +82,14 @@ const objArrMenuitems = reactive([
   {
     key: '/demo/zod-demo',
     icon: () => h(InboxOutlined),
-    label: 'vue-i18n-demo',
-    title: 'vue-i18n-demo',
+    label: 'zod-demo',
+    title: 'zod-demo',
   },
   {
     key: '/profile',
     icon: () => h(InboxOutlined),
-    label: 'vue-i18n-demo',
-    title: 'vue-i18n-demo',
+    label: 'profile-demo',
+    title: 'profile-demo',
   },
   {
     key: 'sub1',
