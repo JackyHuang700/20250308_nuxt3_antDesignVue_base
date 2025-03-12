@@ -3,6 +3,7 @@
     v-model:active-key="strActiveTab"
     :hide-add="true"
     type="editable-card"
+    class="tabs-view"
     @change="onTabsChange"
     @edit="onTabsRemoveOrAdd"
   >
@@ -12,7 +13,9 @@
           <component :is="_tab.component" />
         </template>
         <template v-else>
-          <slot :name="_tab.key" />
+          <div class="p-[24px] h-full">
+            <slot :name="_tab.key" />
+          </div>
         </template>
       </a-tab-pane>
     </template>
@@ -59,4 +62,17 @@ const setMockTabs = () => {
 onMounted(() => {
   setMockTabs()
 })
+
+defineOptions({
+  name: 'TabsView',
+})
 </script>
+<style>
+@import '@/assets/css/main.css';
+
+.tabs-view {
+}
+.tabs-view .ant-tabs-nav {
+  @apply bg-white !mb-0;
+}
+</style>

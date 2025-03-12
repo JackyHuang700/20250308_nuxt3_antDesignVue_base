@@ -1,5 +1,5 @@
 <template>
-  <a-layout-content class="bg-white mx-[24px] my-[16px] p-[24px] min-h-[280px]">
+  <a-layout-content class="bg-[#f0f2f5] min-h-[280px]">
     <slot />
   </a-layout-content>
 </template>
