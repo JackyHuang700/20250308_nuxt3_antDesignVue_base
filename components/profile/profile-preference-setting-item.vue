@@ -7,7 +7,7 @@
       <span class="text-zinc-400 text-sm">系统消息将以站内信的形式通知</span>
     </div>
     <div class="basis-[50px]">
-      <a-switch
+      <a-switch]
         v-model:checked="isOpen"
         :checked-children="objLangCommon.true"
         :un-checked-children="objLangCommon.false"

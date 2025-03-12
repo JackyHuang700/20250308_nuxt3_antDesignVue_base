@@ -20,12 +20,12 @@ import { useI18nLang } from '@/composables/useI18nLang'
 
 import ProfileInfo from '@/components/profile/profile-info.vue'
 import ProfileMsg from '~/components/profile/profile-msg.vue'
+import ProfilePreferenceSetting from '~/components/profile/profile-preference-setting.vue'
 import {
   UserOutlined,
   SettingOutlined,
   CalendarOutlined,
 } from '@ant-design/icons-vue'
-import ProfilePreferenceSetting from '@/components/profile/profile_preference_setting.vue'
 
 const { objLangProfile } = useI18nLang()
 
