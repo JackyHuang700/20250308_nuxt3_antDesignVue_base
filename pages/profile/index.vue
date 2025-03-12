@@ -1,17 +1,19 @@
 <template>
   <div>
-    <a-tabs v-model:active-key="strActiveKey" hide-add tab-position="left">
-      <template #leftExtra>
-        <ProfileInfo />
-      </template>
-      <a-tab-pane v-for="_tabPane in objArrTabPane" :key="_tabPane.key">
-        <template #tab>
-          <component :is="_tabPane.icon" />
-          <span>{{ _tabPane.title }}</span>
+    <KCard>
+      <a-tabs v-model:active-key="strActiveKey" hide-add tab-position="left">
+        <template #leftExtra>
+          <ProfileInfo />
         </template>
-        <component :is="_tabPane.component" />
-      </a-tab-pane>
-    </a-tabs>
+        <a-tab-pane v-for="_tabPane in objArrTabPane" :key="_tabPane.key">
+          <template #tab>
+            <component :is="_tabPane.icon" />
+            <span>{{ _tabPane.title }}</span>
+          </template>
+          <component :is="_tabPane.component" />
+        </a-tab-pane>
+      </a-tabs>
+    </KCard>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ import ProfileInfo from '@/components/profile/profile-info.vue'
 import ProfileMsg from '~/components/profile/profile-msg.vue'
 import ProfilePreferenceSetting from '~/components/profile/profile-preference-setting.vue'
 import ProfileSecurityLog from '@/components/profile/profile-security-log.vue'
+import KCard from '@/components/shared/k-card.vue'
 import {
   UserOutlined,
   SettingOutlined,
