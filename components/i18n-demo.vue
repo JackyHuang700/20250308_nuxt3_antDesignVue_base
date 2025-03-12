@@ -13,9 +13,9 @@
       <button @click="onChangeUserNameToJK">change JK user</button>
       <button @click="onChangeUserNameToLeo">change Leo user</button>
     </div>
-    <div class="flex flex-col flex-wrap justify-center items-start gap-2.5">
-      <button @click="onSetLocaleToUS">en-US</button>
-      <button @click="onSetLocaleToTW">zh-TW</button>
+    <div class="flex justify-start items-start gap-2.5 mt-2.5">
+      <button @click="onSetLocaleToUS">set en-US</button>
+      <button @click="onSetLocaleToTW">set zh-TW</button>
     </div>
   </div>
 </template>
