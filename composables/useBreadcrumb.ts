@@ -7,6 +7,23 @@ export const useBreadcrumb = () => {
 
   const objArrAllBreadcrumb = computed(() => [
     {
+      key: '/',
+      items: [
+        {
+          label: 'Home',
+          href: '/',
+        },
+        {
+          label: t('welcome'),
+          href: undefined,
+        },
+        {
+          label: 'i18n Demo',
+          href: '',
+        },
+      ],
+    },
+    {
       key: '/demo/i18n-demo',
       items: [
         {
@@ -18,6 +35,7 @@ export const useBreadcrumb = () => {
           href: undefined,
         },
         {
+          label: 'i18n Demo',
           href: '',
         },
       ],
