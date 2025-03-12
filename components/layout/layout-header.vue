@@ -16,6 +16,9 @@
         />
       </template>
     </div>
+
+    <LayoutBreadcrumb />
+
     <div class="flex items-center h-full">
       <ProfileHeaderInfo />
     </div>
@@ -27,6 +30,7 @@ import { useLayoutCollapsed } from '@/composables/useLayoutCollapsed'
 
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
 import ProfileHeaderInfo from '@/components/profile/profile-header-info.vue'
+import LayoutBreadcrumb from '@/components/layout/layout-breadcrumb.vue'
 
 const { isCollapsed } = useLayoutCollapsed()
 
