@@ -14,5 +14,11 @@
   "profile_setting": "Profile Setting",
   "profile_msg": "Profile Message",
   "profile_preference_setting": "Preference Setting",
-  "profile_security_log": "Security Log"
+  "profile_security_log": "Security Log",
+  "pagination_show_total": "Total {total} items",
+  "pagination_items_per_page": "items/page",
+  "pagination_jump_to": "Jump to",
+  "pagination_page": "page",
+  "pagination_prev_page": "Previous Page",
+  "pagination_next_page": "Next Page"
 }

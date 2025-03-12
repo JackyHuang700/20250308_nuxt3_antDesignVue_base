@@ -21,6 +21,7 @@ import { useI18nLang } from '@/composables/useI18nLang'
 import ProfileInfo from '@/components/profile/profile-info.vue'
 import ProfileMsg from '~/components/profile/profile-msg.vue'
 import ProfilePreferenceSetting from '~/components/profile/profile-preference-setting.vue'
+import ProfileSecurityLog from '@/components/profile/profile-security-log.vue'
 import {
   UserOutlined,
   SettingOutlined,
@@ -55,7 +56,7 @@ const objArrTabPane = ref<ObjArrTabPane[]>([
     key: 'profile-log',
     icon: markRaw(CalendarOutlined),
     title: objLangProfile.profile_security_log,
-    component: null,
+    component: markRaw(ProfileSecurityLog),
   },
 ] as const)
 

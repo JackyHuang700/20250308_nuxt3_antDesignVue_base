@@ -14,5 +14,11 @@
   "profile_setting": "帳戶設置",
   "profile_msg": "帳戶訊息",
   "profile_preference_setting": "偏好設定",
-  "profile_security_log": "安全日誌"
+  "profile_security_log": "安全日誌",
+  "pagination_show_total": "共 {total} 項",
+  "pagination_items_per_page": "項/頁",
+  "pagination_jump_to": "跳至",
+  "pagination_page": "頁",
+  "pagination_prev_page": "上一頁",
+  "pagination_next_page": "下一頁"
 }

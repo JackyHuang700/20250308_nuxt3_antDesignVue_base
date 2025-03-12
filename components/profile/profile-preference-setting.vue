@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import { useI18nLang } from '@/composables/useI18nLang'
 
+import ProfileContentTitle from '@/components/profile/profile-content-title.vue'
 import ProfilePreferenceSettingItem from '@/components/profile/profile-preference-setting-item.vue'
 
 const { objLangProfile } = useI18nLang()

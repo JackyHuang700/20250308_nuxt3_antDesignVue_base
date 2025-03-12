@@ -30,6 +30,16 @@ export const useI18nLang = () => {
     logout: t('logout'),
   })
 
+  const objLangPagination = reactive({
+    pagination_show_total: (total: string | number) =>
+      t('pagination_show_total', { total }),
+    pagination_items_per_page: t('pagination_items_per_page'),
+    pagination_jump_to: t('pagination_jump_to'),
+    pagination_page: t('pagination_page'),
+    pagination_prev_page: t('pagination_prev_page'),
+    pagination_next_page: t('pagination_next_page'),
+  })
+
   const setLocaleToUS = () => setLocale('en-US')
 
   const setLocaleToTW = () => setLocale('zh-TW')
@@ -39,6 +49,7 @@ export const useI18nLang = () => {
     objLangCommon,
     objLangUserLogin,
     objLangProfile,
+    objLangPagination,
     setLocaleToUS,
     setLocaleToTW,
   }
