@@ -73,6 +73,6 @@ defineOptions({
 .tabs-view {
 }
 .tabs-view .ant-tabs-nav {
-  @apply bg-white !mb-0;
+  @apply bg-white shadow-xs !mb-0 border-zinc-300 border-b border-solid;
 }
 </style>

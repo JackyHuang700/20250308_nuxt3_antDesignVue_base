@@ -127,16 +127,18 @@ export const useCustomTabsPane = () => {
     objArrTabs.value = _objArrTabs
   }
 
+  // setting first render tabs data
   const setInitActiveTabAndMenuSelectedKeys = () => {
     const _path = route.path
     const _tab = getAllTabs().find((c) => c.key === _path)
+    const _notIndexPage = _path !== '/'
 
-    if (_tab) {
+    if (_tab && _notIndexPage) {
       const { component: _, ...rest } = _tab
 
       strActiveTab.value = _path
       // objArrTabs.value.push(rest) // !! don't delete it !!
-      Object.assign(objArrTabs.value, [rest])
+      Object.assign(objArrTabs.value, objArrTabs.value.push(rest))
       strArrMenuSelectedKeys.value = [_path]
       strArrMenuOpenKeys.value = [..._tab.menuOpenKeys]
     }
