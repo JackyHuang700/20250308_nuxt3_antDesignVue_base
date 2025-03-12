@@ -24,12 +24,12 @@ export const useAntPagination = () => {
       })
     },
     showTotal: (total) => {
-      return objLangPagination.pagination_show_total(total)
+      return objLangPagination.value.pagination_show_total(total)
     },
     locale: {
-      items_per_page: objLangPagination.pagination_items_per_page,
-      jump_to: objLangPagination.pagination_jump_to,
-      page: objLangPagination.pagination_page,
+      items_per_page: objLangPagination.value.pagination_items_per_page,
+      jump_to: objLangPagination.value.pagination_jump_to,
+      page: objLangPagination.value.pagination_page,
     },
   })
 

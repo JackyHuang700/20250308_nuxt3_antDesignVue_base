@@ -1,11 +1,11 @@
 import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
-import EnvDemo from '@/components/env-demo.vue'
-import I18nDemo from '@/components/i18n-demo.vue'
-import PiniaDemo from '@/components/pinia-demo.vue'
-import VueQueryDemo from '@/components/vue-query-demo.vue'
-import ZodDemo from '@/components/zod-demo.vue'
+import EnvDemo from '~/components/demo/env-demo.vue'
+import I18nDemo from '~/components/demo/i18n-demo.vue'
+import PiniaDemo from '~/components/demo/pinia-demo.vue'
+import VueQueryDemo from '~/components/demo/vue-query-demo.vue'
+import ZodDemo from '~/components/demo/zod-demo.vue'
 
 import type { CustomTabsPane } from '~/types/types'
 
